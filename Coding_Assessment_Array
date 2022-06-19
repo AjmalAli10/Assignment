@@ -1,0 +1,11 @@
+function rotLeft(a, d) {
+    for(let i = 0; i < d; i++){
+        let temp = a[0]; //1, 2
+        a.shift(); //[2,3,4] <- [3,4,1]
+        a.push(temp); //[2,3,4,1] <-[3,4,1,2]
+    }
+    return a; // value-- [3,4,1,2]
+}
+c= [1, 2, 3, 4]
+f = 2
+(rotLeft(c, f))
